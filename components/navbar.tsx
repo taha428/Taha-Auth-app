@@ -48,7 +48,7 @@ export default function Navbar({ session }: NavbarProps) {
             )}
             <span>{session.user.name}</span>
             <button
-              onClick={() => signOut({ redirect: true, callbackUrl: "/signin" })}
+              onClick={() => signOut({ redirect: true, callbackUrl: "/auth/signin" })}
               style={{
                 padding: "0.5rem 1rem",
                 backgroundColor: "#e74c3c",
@@ -63,7 +63,7 @@ export default function Navbar({ session }: NavbarProps) {
           </div>
         ) : (
           <Link
-            href="/signin"
+            href="/auth/sigin"
             style={{
               padding: "0.5rem 1rem",
               backgroundColor: "#3498db",
